@@ -6,4 +6,5 @@
 #' @noRd
 app_server <- function(input, output, session) {
   # Your application server logic
+  mod_jsonfilecreator_server("jsonfilecreator_1")
 }

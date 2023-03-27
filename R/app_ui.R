@@ -3,15 +3,52 @@
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @import shiny
+#' @import shinydashboard
 #' @noRd
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
-    # Your application UI logic
-    fluidPage(
-      h1("jsonfilehandler")
+    shinyWidgets::useShinydashboard(),
+    # List the first level UI elements here
+    dashboardPage(
+      dashboardHeader(title = "Json File Generator"),
+
+      # Sidebar -----------------------------------------------------------------
+      dashboardSidebar(
+        sidebarMenu(
+          id = "sidebar",
+          div(class = "sticky_footer",
+              shiny::img(src = "www/images.png", #tags$a(img(src = "www/images.png", align = "right", height="13%", width="13%"), href="https://oekofor.netlify.app/de/"),
+                         width = "228")),
+          hr(),
+            menuItem(h4("Select settings"),
+                    tabName = "select_settings"
+           )
+        )
+      ),
+
+      # Body --------------------------------------------------------------------
+      dashboardBody(
+        tabItems(
+          tabItem(
+            tabName = "select_settings",
+            # Your application UI logic
+            fluidPage(
+              fluidRow(
+                column(
+                  6,
+                  box(mod_jsonfilecreator_ui("jsonfilecreator_1"), width = NULL)
+                )
+              )
+            )
+          )#,
+          #tabItem(
+          #  tabName = "recorder_tab_char",
+          #)
+      )
     )
+  )
   )
 }
 
