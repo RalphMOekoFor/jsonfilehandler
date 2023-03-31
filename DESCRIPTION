@@ -6,9 +6,13 @@ Description: PKG_DESC.
 License: What license is it under?
 Imports: 
     config (>= 0.3.1),
+    dplyr,
     golem (>= 0.3.5),
+    jsonlite,
+    readxl,
     shiny (>= 1.7.4),
     shinydashboard,
+    shinyjs,
     shinyWidgets
 Encoding: UTF-8
 LazyData: true
@@ -16,3 +20,5 @@ RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+URL: https://github.com/RalphMOekoFor/jsonfilehandler
+BugReports: https://github.com/RalphMOekoFor/jsonfilehandler/issues
