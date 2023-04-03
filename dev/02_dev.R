@@ -18,6 +18,11 @@
 ## install.package('attachment') # if needed.
 usethis::use_package( "shinyWidgets")
 usethis::use_package( "shinydashboard" )
+usethis::use_package( "readxl" )
+usethis::use_package( "dplyr" )
+usethis::use_package("jsonlite")
+usethis::use_package("shiny")
+usethis::use_package("shinyjs")
 attachment::att_amend_desc()
 
 ## Add modules ----

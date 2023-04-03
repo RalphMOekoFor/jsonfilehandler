@@ -37,7 +37,7 @@ app_ui <- function(request) {
             fluidPage(
               fluidRow(
                 column(
-                  6,
+                  12,
                   box(mod_jsonfilecreator_ui("jsonfilecreator_1"), width = NULL)
                 )
               )
